@@ -1,0 +1,6 @@
+@k3s_HostAddress = http://localhost:5177
+
+GET {{k3s_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
