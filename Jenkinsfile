@@ -6,6 +6,11 @@ pipeline {
         }
     }
     stages {
+    stage('Restore') {
+            steps {
+                sh 'dotnet restore'
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'dotnet restore' 
