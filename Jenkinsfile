@@ -1,6 +1,10 @@
 pipeline {
     // Defines where the pipeline will run. 'any' means any available agent.
-    agent any
+     agent {
+        docker {
+            image 'mcr.microsoft.com/dotnet/sdk:8.0'
+        }
+    }
     // Stages define the main steps of the CI process
     stages {
         stage('Restore Dependencies') {
